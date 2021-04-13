@@ -7,6 +7,7 @@ const App = () => {
       <p>from App rerender</p>
       <p> now for a worldview demo! </p>
       <p> class on April 13 </p>
+      <p> blue </p>
 
       <div style={{ width: "50vw", height: "50vh" }}>
         <WorldviewDemo />

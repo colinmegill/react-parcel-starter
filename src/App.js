@@ -1,17 +1,15 @@
 import React from "react";
 import WorldviewDemo from "./worldview-example";
+import { csv } from "d3-fetch";
 
 const App = () => {
+  csv(
+    "https://raw.githubusercontent.com/colinmegill/react-parcel-starter/main/weather.csv"
+  ).then((data) => console.log(data));
   return (
     <div>
-      <p>from App rerender</p>
-      <p> now for a worldview demo! </p>
-      <p> class on April 13 </p>
-      <p> blue </p>
-
-      <div style={{ width: "50vw", height: "50vh" }}>
-        <WorldviewDemo />
-      </div>
+      <h1>Exploratory Data Analysis, Assignment 2, INFO 474 SP 2021</h1>
+      <p>Data!</p>
     </div>
   );
 };

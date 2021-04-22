@@ -62,7 +62,16 @@ const App = () => {
 
       <h3> Working with geo data </h3>
       <svg width={1000} height={600} style={{ border: "1px solid black" }}>
-        <path d={mapPathString} />
+        <path d={mapPathString} fill="rgb(200, 200, 200)" />
+        {dataSmallSample.map((measurement) => {
+          return (
+            <circle
+              transform={`translate(
+                ${projection([measurement.longitude, measurement.latitude])})`}
+              r="1.5"
+            />
+          );
+        })}
       </svg>
 
       <h3> Binning </h3>
